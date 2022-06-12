@@ -14,8 +14,6 @@ def update_mahasiswa(request):
         except :
             mahasiswa = Mahasiswa(npm=npm, nama=nama)
         mahasiswa.save()
-        print (mahasiswa.nama)
-        print (mahasiswa.npm)
-        return JsonResponse({'status':'OK', 'nama': nama, 'npm': npm})
+        return JsonResponse({'status':'OK'})
     return JsonResponse({'status': 'Method Not Allowed'})
     
